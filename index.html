@@ -1,39 +1,150 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
-    <title>萩原のポートフォリオ</title>
-    <style>
-        /* ボタンを「プロのデザイナー」っぽく見せる装飾 */
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #007bff;
-            /* 青色 */
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-            /* 重ねた時に暗くする */
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAGIWARA | Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-
 <body>
-    <h1>萩原 ポートフォリオ</h1>
-    <p>28年のデザイン経験と、最新のプログラミングスキルを融合させた作品集です。</p>
 
-    <!-- ここに、さっきのコードを貼り付けます！ -->
-    <a href="https://warahagi.github.io/quick-fix-tool/" class="btn" target="_blank">
-        自作ツール：Quick-Fix-Tool を試す
+    <div class="container">
+        <header>
+            <h1 id="main-title">HAGIWARA</h1>
+            <p class="hero-subtitle">28 Years of Design Expertise × Modern Web Development</p>
+            <a href="#projects" class="btn-primary">Explore My Work</a>
+        </header>
+
+        <section id="story" class="story-banner">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                <i data-lucide="cloud-rain" style="color: var(--primary-color);"></i>
+                <span style="font-weight: 600; letter-spacing: 0.1em; font-size: 0.8rem; color: var(--primary-color);">MY STORY</span>
+            </div>
+            <p style="font-size: 1.2rem; font-weight: 300;">
+                「雨に濡れた単語帳は、私の再挑戦の象徴です。」
+            </p>
+            <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 0.95rem;">
+                28年のデザインキャリアを経て、再び「学ぶ楽しさ」に出会いました。一歩ずつ、確実に。
+            </p>
+        </section>
+
+        <section id="works" class="works-section" style="margin-top: 3rem; padding: 2rem; background-color: rgba(var(--primary-rgb), 0.05); border-radius: 12px;">
+    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+        <i data-lucide="layout" style="color: var(--primary-color);"></i>
+        <span style="font-weight: 600; letter-spacing: 0.1em; font-size: 0.8rem; color: var(--primary-color);">DESIGN WORKS</span>
+    </div>
+    
+    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+        これまでの制作実績をポートフォリオにまとめています。
+    </p>
+    
+    <a href="https://drive.google.com/file/d/1DtES9gH4QjRzm-OSOebcMs_6EmcZaU-i/view?usp=sharing" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="pdf-button" 
+       style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: var(--primary-color); color: white; padding: 0.8rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; transition: transform 0.2s;">
+        <i data-lucide="file-text" style="width: 18px; height: 18px;"></i>
+        ポートフォリオ（PDF）を開く
     </a>
+</section>
 
+        <section id="projects">
+            <h2 class="section-title">PROJECTS</h2>
+            <div class="projects-grid">
+                
+                <!-- Quick Fix Tool -->
+                <a href="https://warahagi.github.io/quick-fix-tool/" class="project-card" target="_blank">
+                    <div class="project-image">
+                        <img src="quick-fix-tool.png" alt="Quick Fix Tool">
+                    </div>
+                    <h3 class="project-title">Quick-Fix-Tool</h3>
+                    <p class="project-desc">開発者のためのユーティリティツール。日常の細かな課題を即座に解決します。</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Utility</span>
+                    </div>
+                </a>
+
+                <!-- IV Drip Calc -->
+                <a href="https://github.com/warahagi/iv-drip-calc" class="project-card" target="_blank">
+                    <div class="project-image">
+                        <img src="iv-drip-calc.png" alt="IV Drip Calculator">
+                    </div>
+                    <h3 class="project-title">IV Drip Calculator</h3>
+                    <p class="project-desc">看護師向け点滴滴下数計算ツール。直感的なUIでミスを防ぎます。</p>
+                    <div class="project-tags">
+                        <span class="tag">PWA</span>
+                        <span class="tag">Medical</span>
+                    </div>
+                </a>
+
+                <!-- Suzuka 3D Sim -->
+                <a href="https://github.com/warahagi/suzuka-3d-sim" class="project-card" target="_blank">
+                    <div class="project-image">
+                        <img src="suzuka-3d-sim.png" alt="Suzuka 3D Sim">
+                    </div>
+                    <h3 class="project-title">Suzuka 3D Simulator</h3>
+                    <p class="project-desc">3D空間でのシミュレーション。物理演算とビジュアルの融合を追求。</p>
+                    <div class="project-tags">
+                        <span class="tag">3D</span>
+                        <span class="tag">Simulation</span>
+                    </div>
+                </a>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">その他のプロジェクトはGitHubで公開しています</p>
+                <a href="https://github.com/warahagi?tab=repositories" class="btn-primary" target="_blank" style="background: transparent; border: 1px solid var(--border-color); color: var(--text-main);">
+                    <i data-lucide="external-link" style="vertical-align: middle; margin-right: 8px;"></i>
+                    View More on GitHub
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <div class="social-links">
+                <a href="https://github.com/warahagi" target="_blank" style="color: inherit; text-decoration: none; margin: 0 10px;">
+                    <i data-lucide="github"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 HAGIWARA Portfolio. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('header, section, footer').forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+    </script>
 </body>
-
 </html>
