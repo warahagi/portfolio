@@ -241,11 +241,13 @@ footer {
 /* Scroll Animations */
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(30px) rotate(10deg);
+    /* 30px下にいて、10度傾いて、透明 */
     transition: all 0.8s ease-out;
 }
 
 .reveal.active {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) rotate(10deg);
+    /* 最初は10度傾けておく */
 }
