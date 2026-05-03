@@ -248,6 +248,6 @@ footer {
 
 .reveal.active {
     opacity: 1;
-    transform: translateY(0) rotate(10deg);
-    /* 最初は10度傾けておく */
+    transform: translateY(0) rotate(0deg);
+    /* 本来の場所に戻り、0度（まっすぐ）になる */
 }
