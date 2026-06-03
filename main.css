@@ -200,6 +200,63 @@ h1 {
     color: var(--text-muted);
 }
 
+/* PDF用のボタンデザイン */
+.pdf-button{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--primary-color); /* 青色 */
+    color: #efd0e7;
+    border-radius: 50px;
+    text-decoration: none; /* 下線を消す */
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+/* マウスを乗せたときの動き */
+.pdf-button:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+    color: #000;
+}
+/* アプリを試すボタンの共通デザイン（紫） */
+.app-button{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--accent-color); /* 薄い紫色に変更 */
+    color: #efd0e7;
+    border-radius: 50px;
+    text-decoration: none; /* 下線を消す */
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+/* マウスを乗せたときの動き */
+.app-button:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+    color: #000;
+}
+
+/* コード用の枠線ボタン */
+.code-button {
+    display: intine-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: transparent; /* 背景は透明 */
+    border: 1px solid var(--primary-color); /* 青い枠線 */
+    color: var(--primary-color); /* 青い文字 */
+    border-radius:50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.code-button:hover {
+    background-color: var(--primary-color); /* ホバーした時に塗りつぶす */
+    color: white; /* 文字を白にする */
+}
 /* Footer */
 footer {
     padding: 4rem 0;
