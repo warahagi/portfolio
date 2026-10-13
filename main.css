@@ -309,20 +309,19 @@ footer {
     /* 本来の場所に戻り、0度（まっすぐ）になる */
 }
 
-   /* 動画プレイヤーのレスポンシブ対応 */
+   /* YOuTube感を完全に消すシームレスな動画エリア */
    .video-container {
-    position: relative;
     width: 100%;
-    padding-top: 56.25%;  /* 16:9の比率 */
-    margin: 2rem 0;
+    max-width: 900px;
+    margin: 2.5rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* 薄い影をつけて高級感を出す */
    }
 
-   .video-container iframe,
    .video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    border-radius: 8px;
+    height: auto;
+    display: block;
+    object-fit: cover; /* 枠にフィットさせる */
    }
